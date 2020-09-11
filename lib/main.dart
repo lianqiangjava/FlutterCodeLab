@@ -4,15 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_practice/guid.dart';
 
 import 'package:flutter_practice/routes/Second.dart';
+import 'package:flutter_practice/routes/aligncode.dart';
+import 'package:flutter_practice/routes/boxcode.dart';
 import 'package:flutter_practice/routes/buttoncode.dart';
 import 'package:flutter_practice/routes/first.dart';
+import 'package:flutter_practice/routes/flexcode.dart';
 import 'package:flutter_practice/routes/formcode.dart';
 import 'package:flutter_practice/routes/imagecode.dart';
 import 'package:flutter_practice/routes/indicatorcode.dart';
 import 'package:flutter_practice/routes/loadfile.dart';
+import 'package:flutter_practice/routes/rowandcolumn.dart';
+import 'package:flutter_practice/routes/stackcode.dart';
 import 'package:flutter_practice/routes/switchandcheckbox.dart';
 import 'package:flutter_practice/routes/textcode.dart';
 import 'package:flutter_practice/routes/textfield.dart';
+import 'package:flutter_practice/routes/transform.dart';
 
 
 void main() {
@@ -55,6 +61,13 @@ class MyApp extends StatelessWidget {
         "textfield": (context) => TextFieldCode(),
         "formcode": (context) => FormCode(),
         "indicator": (context) => IndicatorCode(),
+        "rowandcolumn": (context) => RowAndColumn(),
+        "flexcode": (context) => FlexCode(),
+        "stackCode": (context) => StackCode(),
+        "aligncode": (context) => AlignCode(),
+        "boxcode": (context) => BoxCode(),
+        "transform": (context) => TransForm(),
+
 
 
       },

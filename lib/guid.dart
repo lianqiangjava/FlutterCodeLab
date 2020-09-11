@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 enum RoutePath { ROUTE, ASSETS, ERROR,TEXT,BUTTON,IMAGE,SWITCH,
-  TEXTFIELD, FORM,INDICATOR,}
+  TEXTFIELD, FORM,INDICATOR,ROWANDCOLUMN,FLEX,STACK,ALIGN,
+BOX,TRANSFORM,}
 
 ///各功能示范导航菜单
 class Guide extends StatelessWidget {
@@ -25,6 +26,12 @@ class Guide extends StatelessWidget {
           getMenuItem(context, RoutePath.TEXTFIELD),
           getMenuItem(context, RoutePath.FORM),
           getMenuItem(context, RoutePath.INDICATOR),
+          getMenuItem(context, RoutePath.ROWANDCOLUMN),
+          getMenuItem(context, RoutePath.FLEX),
+          getMenuItem(context, RoutePath.STACK),
+          getMenuItem(context, RoutePath.ALIGN),
+          getMenuItem(context, RoutePath.BOX),
+          getMenuItem(context, RoutePath.TRANSFORM),
         ],
       ),
     );
@@ -76,6 +83,24 @@ Widget getMenuItem(BuildContext context, RoutePath path) {
           break;
         case RoutePath.INDICATOR:
           page = 'indicator';
+          break;
+        case RoutePath.ROWANDCOLUMN:
+          page = 'rowandcolumn';
+          break;
+        case RoutePath.FLEX:
+          page = 'flexcode';
+          break;
+        case RoutePath.STACK:
+          page = 'stackCode';
+          break;
+        case RoutePath.ALIGN:
+          page = 'aligncode';
+          break;
+        case RoutePath.BOX:
+          page = 'boxcode';
+          break;
+        case RoutePath.TRANSFORM:
+          page = 'transform';
           break;
       }
       Navigator.of(context).pushNamed(page);
