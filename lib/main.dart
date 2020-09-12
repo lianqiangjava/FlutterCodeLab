@@ -5,15 +5,22 @@ import 'package:flutter_practice/guid.dart';
 
 import 'package:flutter_practice/routes/Second.dart';
 import 'package:flutter_practice/routes/aligncode.dart';
+import 'package:flutter_practice/routes/appbar_drawer.dart';
 import 'package:flutter_practice/routes/boxcode.dart';
 import 'package:flutter_practice/routes/buttoncode.dart';
+import 'package:flutter_practice/routes/clipcode.dart';
+import 'package:flutter_practice/routes/containercode.dart';
 import 'package:flutter_practice/routes/first.dart';
 import 'package:flutter_practice/routes/flexcode.dart';
 import 'package:flutter_practice/routes/formcode.dart';
+import 'package:flutter_practice/routes/gridview_code.dart';
 import 'package:flutter_practice/routes/imagecode.dart';
 import 'package:flutter_practice/routes/indicatorcode.dart';
+import 'package:flutter_practice/routes/listviewcode.dart';
 import 'package:flutter_practice/routes/loadfile.dart';
 import 'package:flutter_practice/routes/rowandcolumn.dart';
+import 'package:flutter_practice/routes/scrollcontroler_code.dart';
+import 'package:flutter_practice/routes/scrollview_code.dart';
 import 'package:flutter_practice/routes/stackcode.dart';
 import 'package:flutter_practice/routes/switchandcheckbox.dart';
 import 'package:flutter_practice/routes/textcode.dart';
@@ -67,6 +74,13 @@ class MyApp extends StatelessWidget {
         "aligncode": (context) => AlignCode(),
         "boxcode": (context) => BoxCode(),
         "transform": (context) => TransForm(),
+        "containercode": (context) => ContainerCode(),
+        "appbaranddrawer": (context) => AppBarAndDrawer(),
+        "clipcode": (context) => ClipCode(),
+        "scroll": (context) => ScrollViewCode(),
+        "listview": (context) => ListViewCode(),
+        "gridview": (context) => GridViewCode(),
+        "scrollcontro": (context) => ScrollControllCode(),
 
 
 

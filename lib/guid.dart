@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 enum RoutePath { ROUTE, ASSETS, ERROR,TEXT,BUTTON,IMAGE,SWITCH,
   TEXTFIELD, FORM,INDICATOR,ROWANDCOLUMN,FLEX,STACK,ALIGN,
-BOX,TRANSFORM,}
+BOX,TRANSFORM,CONTAINER,APPBAR,CLIP,SCROLL,LISTVIEW,GRIDVIEW,
+SCROLLCONTRO,}
 
 ///各功能示范导航菜单
 class Guide extends StatelessWidget {
@@ -32,6 +33,13 @@ class Guide extends StatelessWidget {
           getMenuItem(context, RoutePath.ALIGN),
           getMenuItem(context, RoutePath.BOX),
           getMenuItem(context, RoutePath.TRANSFORM),
+          getMenuItem(context, RoutePath.CONTAINER),
+          getMenuItem(context, RoutePath.APPBAR),
+          getMenuItem(context, RoutePath.CLIP),
+          getMenuItem(context, RoutePath.SCROLL),
+          getMenuItem(context, RoutePath.LISTVIEW),
+          getMenuItem(context, RoutePath.GRIDVIEW),
+          getMenuItem(context, RoutePath.SCROLLCONTRO),
         ],
       ),
     );
@@ -101,6 +109,27 @@ Widget getMenuItem(BuildContext context, RoutePath path) {
           break;
         case RoutePath.TRANSFORM:
           page = 'transform';
+          break;
+        case RoutePath.CONTAINER:
+          page = 'containercode';
+          break;
+        case RoutePath.APPBAR:
+          page = 'appbaranddrawer';
+          break;
+        case RoutePath.CLIP:
+          page = 'clipcode';
+          break;
+        case RoutePath.SCROLL:
+          page = 'scroll';
+          break;
+        case RoutePath.LISTVIEW:
+          page = 'listview';
+          break;
+        case RoutePath.GRIDVIEW:
+          page = 'gridview';
+          break;
+        case RoutePath.SCROLLCONTRO:
+          page = 'scrollcontro';
           break;
       }
       Navigator.of(context).pushNamed(page);
