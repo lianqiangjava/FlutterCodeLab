@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum RoutePath { ROUTE, ASSETS, ERROR,TEXT,BUTTON,IMAGE,SWITCH,
-  TEXTFIELD, FORM,INDICATOR,ROWANDCOLUMN,FLEX,STACK,ALIGN,
-BOX,TRANSFORM,CONTAINER,APPBAR,CLIP,SCROLL,LISTVIEW,GRIDVIEW,
-SCROLLCONTRO,}
+import 'comon/rout_path.dart';
 
 ///各功能示范导航菜单
 class Guide extends StatelessWidget {
@@ -16,37 +13,15 @@ class Guide extends StatelessWidget {
       body: GridView(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, childAspectRatio: 1.0),
-        children: <Widget>[
-          getMenuItem(context, RoutePath.ROUTE),
-          getMenuItem(context, RoutePath.ASSETS),
-//          getMenuItem(context, RoutePath.ERROR),
-          getMenuItem(context, RoutePath.TEXT),
-          getMenuItem(context, RoutePath.BUTTON),
-          getMenuItem(context, RoutePath.IMAGE),
-          getMenuItem(context, RoutePath.SWITCH),
-          getMenuItem(context, RoutePath.TEXTFIELD),
-          getMenuItem(context, RoutePath.FORM),
-          getMenuItem(context, RoutePath.INDICATOR),
-          getMenuItem(context, RoutePath.ROWANDCOLUMN),
-          getMenuItem(context, RoutePath.FLEX),
-          getMenuItem(context, RoutePath.STACK),
-          getMenuItem(context, RoutePath.ALIGN),
-          getMenuItem(context, RoutePath.BOX),
-          getMenuItem(context, RoutePath.TRANSFORM),
-          getMenuItem(context, RoutePath.CONTAINER),
-          getMenuItem(context, RoutePath.APPBAR),
-          getMenuItem(context, RoutePath.CLIP),
-          getMenuItem(context, RoutePath.SCROLL),
-          getMenuItem(context, RoutePath.LISTVIEW),
-          getMenuItem(context, RoutePath.GRIDVIEW),
-          getMenuItem(context, RoutePath.SCROLLCONTRO),
-        ],
+//        children: routList.map((e) => getMenuItem(context, e.menuName,e.routPath)).toList(),
+          children: menuForRoute.keys.map((e) => getMenuItem(context, e,menuForRoute[e])).toList(),
+
       ),
     );
   }
 }
 
-Widget getMenuItem(BuildContext context, RoutePath path) {
+Widget getMenuItem(BuildContext context, String name,String path) {
   String page;
   return GestureDetector(
     child: Container(
@@ -54,85 +29,19 @@ Widget getMenuItem(BuildContext context, RoutePath path) {
       height: 300,
       alignment: Alignment.center,
       margin: EdgeInsets.all(10),
-      color: Colors.blueAccent,
+      color: Theme.of(context).primaryColor,
       child: Text(
-        path.toString().substring(10),
+        name,
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.white, fontSize: 24),
+        style: TextStyle(
+            color: Theme.of(context).primaryColor.computeLuminance() > 0.5
+                ? Colors.black
+                : Colors.white,
+            fontSize: 24),
       ),
     ),
     onTap: () {
-      switch (path) {
-        case RoutePath.ROUTE:
-        ///路由示例
-          page = "first";
-          break;
-        case RoutePath.ASSETS:
-        ///Assets资源使用示例
-          page = 'loadfile';
-          break;
-        case RoutePath.TEXT:
-          page = 'text';
-          break;
-        case RoutePath.BUTTON:
-          page = 'button';
-          break;
-        case RoutePath.IMAGE:
-          page = 'image';
-          break;
-        case RoutePath.SWITCH:
-          page = 'switchandcheckbox';
-          break;
-        case RoutePath.TEXTFIELD:
-          page = 'textfield';
-          break;
-        case RoutePath.FORM:
-          page = 'formcode';
-          break;
-        case RoutePath.INDICATOR:
-          page = 'indicator';
-          break;
-        case RoutePath.ROWANDCOLUMN:
-          page = 'rowandcolumn';
-          break;
-        case RoutePath.FLEX:
-          page = 'flexcode';
-          break;
-        case RoutePath.STACK:
-          page = 'stackCode';
-          break;
-        case RoutePath.ALIGN:
-          page = 'aligncode';
-          break;
-        case RoutePath.BOX:
-          page = 'boxcode';
-          break;
-        case RoutePath.TRANSFORM:
-          page = 'transform';
-          break;
-        case RoutePath.CONTAINER:
-          page = 'containercode';
-          break;
-        case RoutePath.APPBAR:
-          page = 'appbaranddrawer';
-          break;
-        case RoutePath.CLIP:
-          page = 'clipcode';
-          break;
-        case RoutePath.SCROLL:
-          page = 'scroll';
-          break;
-        case RoutePath.LISTVIEW:
-          page = 'listview';
-          break;
-        case RoutePath.GRIDVIEW:
-          page = 'gridview';
-          break;
-        case RoutePath.SCROLLCONTRO:
-          page = 'scrollcontro';
-          break;
-      }
-      Navigator.of(context).pushNamed(page);
+      Navigator.of(context).pushNamed(path);
     },
   );
 }

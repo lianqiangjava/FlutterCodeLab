@@ -10,9 +10,11 @@ import 'package:flutter_practice/routes/boxcode.dart';
 import 'package:flutter_practice/routes/buttoncode.dart';
 import 'package:flutter_practice/routes/clipcode.dart';
 import 'package:flutter_practice/routes/containercode.dart';
+import 'package:flutter_practice/routes/dialogcode.dart';
 import 'package:flutter_practice/routes/first.dart';
 import 'package:flutter_practice/routes/flexcode.dart';
 import 'package:flutter_practice/routes/formcode.dart';
+import 'package:flutter_practice/routes/futurecode.dart';
 import 'package:flutter_practice/routes/gridview_code.dart';
 import 'package:flutter_practice/routes/imagecode.dart';
 import 'package:flutter_practice/routes/indicatorcode.dart';
@@ -26,6 +28,8 @@ import 'package:flutter_practice/routes/switchandcheckbox.dart';
 import 'package:flutter_practice/routes/textcode.dart';
 import 'package:flutter_practice/routes/textfield.dart';
 import 'package:flutter_practice/routes/transform.dart';
+
+import 'comon/rout_path.dart';
 
 
 void main() {
@@ -51,7 +55,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Practice',
-      theme: ThemeData(primaryColor: Colors.blue),
+      theme: ThemeData(
+          primaryColor: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+      ),
       initialRoute: "guide",
 
       ///采用路由表
@@ -81,9 +88,8 @@ class MyApp extends StatelessWidget {
         "listview": (context) => ListViewCode(),
         "gridview": (context) => GridViewCode(),
         "scrollcontro": (context) => ScrollControllCode(),
-
-
-
+        "futurecode": (context) => FutureCode(),
+        "dialog": (context) => DialogCode(),
       },
 
       ///如果指定的路由名在路由表中已注册，
