@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/comon/eventbus.dart';
 
 /// 接收数据并返回
 class Second extends StatelessWidget {
@@ -24,7 +25,10 @@ class Second extends StatelessWidget {
                     Text('接收到的数据：$text'),
                     RaisedButton(
                       child: Text('返回'),
-                      onPressed: () => Navigator.pop(context,'来自Second的消息'),
+                      onPressed: (){
+                        bus.emit("jump","Second发送消息了");
+                        Navigator.pop(context,'来自Second的消息');
+                      },
                     )
                   ]
             )

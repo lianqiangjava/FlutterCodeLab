@@ -18,7 +18,7 @@ final List<Routs> routList = [
 //Map<String, WidgetBuilder> getRouts(BuildContext context){
 //  Map<String, WidgetBuilder> map = new Map<String, WidgetBuilder>();
 //  routList.forEach((e) {
-//    map.putIfAbsent(e.routPath,  (context) => Guide());
+//    map.putIfAbsent(e.routPath,  );
 //  });
 //  return map;
 //}
@@ -48,5 +48,12 @@ final Map<String, String> menuForRoute = {
   "GRIDVIEW": "gridview",
   "SCROLLCONTRO": "scrollcontro",
   "FUTURE": "futurecode",
-  "DIALOG": "dialog"
+  "DIALOG": "dialog",
+  "POINT": "pointevent",
+  "Gesture": "gesturecode",
+  "Notifi": "notification",
+  "CusButtom": "custombuttom",
+  "TurnBox":"turnbox",
+  "Paint" : "paint",
+  "Progress":"circularprogress",
 };

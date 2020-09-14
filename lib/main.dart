@@ -10,16 +10,22 @@ import 'package:flutter_practice/routes/boxcode.dart';
 import 'package:flutter_practice/routes/buttoncode.dart';
 import 'package:flutter_practice/routes/clipcode.dart';
 import 'package:flutter_practice/routes/containercode.dart';
+import 'package:flutter_practice/routes/custombuttom.dart';
+import 'package:flutter_practice/routes/custompaint.dart';
 import 'package:flutter_practice/routes/dialogcode.dart';
 import 'package:flutter_practice/routes/first.dart';
 import 'package:flutter_practice/routes/flexcode.dart';
 import 'package:flutter_practice/routes/formcode.dart';
 import 'package:flutter_practice/routes/futurecode.dart';
+import 'package:flutter_practice/routes/gesturecode.dart';
+import 'package:flutter_practice/routes/gradientcircularprogressroute.dart';
 import 'package:flutter_practice/routes/gridview_code.dart';
 import 'package:flutter_practice/routes/imagecode.dart';
 import 'package:flutter_practice/routes/indicatorcode.dart';
 import 'package:flutter_practice/routes/listviewcode.dart';
 import 'package:flutter_practice/routes/loadfile.dart';
+import 'package:flutter_practice/routes/notification_code.dart';
+import 'package:flutter_practice/routes/pointevent.dart';
 import 'package:flutter_practice/routes/rowandcolumn.dart';
 import 'package:flutter_practice/routes/scrollcontroler_code.dart';
 import 'package:flutter_practice/routes/scrollview_code.dart';
@@ -28,6 +34,7 @@ import 'package:flutter_practice/routes/switchandcheckbox.dart';
 import 'package:flutter_practice/routes/textcode.dart';
 import 'package:flutter_practice/routes/textfield.dart';
 import 'package:flutter_practice/routes/transform.dart';
+import 'package:flutter_practice/routes/turnbox.dart';
 
 import 'comon/rout_path.dart';
 
@@ -90,6 +97,14 @@ class MyApp extends StatelessWidget {
         "scrollcontro": (context) => ScrollControllCode(),
         "futurecode": (context) => FutureCode(),
         "dialog": (context) => DialogCode(),
+        "pointevent": (context) => PointEvent(),
+        "gesturecode": (context) => GestureCode(),
+        "notification": (context) => NotificationCode(),
+        "custombuttom": (context) => CustomButtom(),
+        "turnbox" : (context) => TurnBoxRoute(),
+        "paint" : (context) => CustomPaintCode(),
+        "circularprogress":(context) => GradientCircularProgressRoute(),
+
       },
 
       ///如果指定的路由名在路由表中已注册，
