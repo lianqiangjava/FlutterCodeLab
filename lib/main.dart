@@ -13,6 +13,8 @@ import 'package:flutter_practice/routes/containercode.dart';
 import 'package:flutter_practice/routes/custombuttom.dart';
 import 'package:flutter_practice/routes/custompaint.dart';
 import 'package:flutter_practice/routes/dialogcode.dart';
+import 'package:flutter_practice/routes/diocode.dart';
+import 'package:flutter_practice/routes/filecode.dart';
 import 'package:flutter_practice/routes/first.dart';
 import 'package:flutter_practice/routes/flexcode.dart';
 import 'package:flutter_practice/routes/formcode.dart';
@@ -20,6 +22,7 @@ import 'package:flutter_practice/routes/futurecode.dart';
 import 'package:flutter_practice/routes/gesturecode.dart';
 import 'package:flutter_practice/routes/gradientcircularprogressroute.dart';
 import 'package:flutter_practice/routes/gridview_code.dart';
+import 'package:flutter_practice/routes/httpclientcode.dart';
 import 'package:flutter_practice/routes/imagecode.dart';
 import 'package:flutter_practice/routes/indicatorcode.dart';
 import 'package:flutter_practice/routes/listviewcode.dart';
@@ -104,6 +107,9 @@ class MyApp extends StatelessWidget {
         "turnbox" : (context) => TurnBoxRoute(),
         "paint" : (context) => CustomPaintCode(),
         "circularprogress":(context) => GradientCircularProgressRoute(),
+        "file":(context) => FileCode(),
+        "http": (context) => HttpClientCode(),
+        "dio": (context) => DioCode(),
 
       },
 

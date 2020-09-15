@@ -56,4 +56,7 @@ final Map<String, String> menuForRoute = {
   "TurnBox":"turnbox",
   "Paint" : "paint",
   "Progress":"circularprogress",
+  "File": "file",
+  "Http": "http",
+  "Dio" : "dio",
 };
