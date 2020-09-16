@@ -8,6 +8,7 @@ import 'package:flutter_practice/routes/aligncode.dart';
 import 'package:flutter_practice/routes/appbar_drawer.dart';
 import 'package:flutter_practice/routes/boxcode.dart';
 import 'package:flutter_practice/routes/buttoncode.dart';
+import 'package:flutter_practice/routes/channel.dart';
 import 'package:flutter_practice/routes/clipcode.dart';
 import 'package:flutter_practice/routes/containercode.dart';
 import 'package:flutter_practice/routes/custombuttom.dart';
@@ -110,6 +111,7 @@ class MyApp extends StatelessWidget {
         "file":(context) => FileCode(),
         "http": (context) => HttpClientCode(),
         "dio": (context) => DioCode(),
+        "channel": (context) => ChannelCode(),
 
       },
 

@@ -59,4 +59,5 @@ final Map<String, String> menuForRoute = {
   "File": "file",
   "Http": "http",
   "Dio" : "dio",
+  "Channel" : "channel",
 };
